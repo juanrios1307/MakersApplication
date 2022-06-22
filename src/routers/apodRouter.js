@@ -9,5 +9,8 @@ route.all("/", function (req, res, next) {
 });
 
 route.get("/", Controller.getDefault);
+route.get("/date/:date", Controller.getByDate);
+route.get("/range/:startDate/:endDate", Controller.getByRangeDates);
+route.get("/count/:count", Controller.getNumbers);
 
 module.exports = route;
